@@ -1,6 +1,7 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
-import theme from "../styles/theme";
+import theme from "./theme";
+import mediaQueries from "./mediaQueries";
 
 export default function GlobalStyle() {
   return (
@@ -94,6 +95,7 @@ export default function GlobalStyle() {
           font-size: 100%;
           font: inherit;
           vertical-align: baseline;
+          box-sizing: border-box;
         }
         /* HTML5 display-role reset for older browsers */
         article,
@@ -137,22 +139,60 @@ export default function GlobalStyle() {
         /* ------------- */
 
         body {
-          background-color: ${theme.colors.mainBg};
+          background: ${theme.colors.mainBg};
           color: ${theme.colors.main};
           font-size: 18px;
           font-family: ${theme.fonts.primary};
+          min-height: 100vh;
         }
 
         img {
           max-width: 100%;
         }
 
+        a {
+          color: ${theme.colors.primary};
+          text-decoration: none;
+        }
+
+        /* TITLES */
+        .primary-title {
+          font-size: 45px;
+          text-align: center;
+          font-family: ${theme.fonts.logo};
+          color: ${theme.colors.primary};
+
+          ${mediaQueries.tabletteHorizontale} {
+            font-size: 24px;
+          }
+        }
+
+        /* buttons */
+        .btn-primary {
+          border: none;
+          padding: 10px;
+          font-size: 25px;
+          background-color: ${theme.colors.primary};
+          color: #fff;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          &:hover {
+            transform: scale(0.95);
+          }
+        }
+
         /* LAYOUT */
         .max-container {
-          width: 1440px;
+          width: 1280px;
+          max-width: 100%;
           margin-left: auto;
           margin-right: auto;
-          max-width: 100%;
+
+          ${mediaQueries.tabletteHorizontale} {
+            width: 100%;
+            padding: 0 5%;
+          }
         }
       `}
     />

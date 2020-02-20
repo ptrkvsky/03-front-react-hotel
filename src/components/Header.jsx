@@ -1,15 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { HeaderContainer, Nav, Logo } from "../styles/components/header";
 
 const Header = () => {
   return (
-    <Header>
-      Header
-      <nav>
+    <HeaderContainer>
+      <Link to="/">
+        <Logo>🍺 Bar App</Logo>
+      </Link>
+      <Nav>
         <Link to="/">Home</Link>
-        <Link to="/component">Component</Link>
-      </nav>
-    </Header>
+        <Link to="/me">Me</Link>
+      </Nav>
+    </HeaderContainer>
   );
 };
 
