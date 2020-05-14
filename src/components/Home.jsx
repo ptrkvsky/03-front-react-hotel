@@ -1,12 +1,27 @@
 import PropTypes from "prop-types";
 import React from "react";
-import BarList from "./bar/BarList";
+import HotelList from "./hotel/HotelList";
+import HotelFiltres from "./hotel/HotelFiltres";
+import BlockPagination from "./pagination/BlockPagination"
+import { BannerHome, ContainerHome } from "../styles/components/homePage"
 
-const Home = ({ bars }) => {
+const Home = ({ hotels, categoriesChambre, setHotels }) => {
   return (
     <div>
-      <h1 className="primary-title">Les bars de Toulouse</h1>
-      <BarList bars={bars} />
+      <BannerHome className="banner">
+        <div className="max-container relative">
+          <h1>
+            <span className="item city">Bagdad</span>
+            <span className="item country">Afghanistan</span>
+          </h1>
+        </div>
+      </BannerHome>
+      <ContainerHome className="max-container">
+        <HotelFiltres setHotels={setHotels} categoriesChambre={categoriesChambre} />
+        <HotelList hotels={hotels} />
+
+        <BlockPagination hotels={hotels} />
+      </ContainerHome>
     </div>
   );
 };

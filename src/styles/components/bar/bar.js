@@ -3,8 +3,8 @@ import theme from "../../theme";
 
 const BarContainer = styled("article")`
   margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid ${theme.colors.secondary};
+  padding-bottom: 40px;
+  border-bottom: 1px solid #9e5b5b38;
 `;
 
 const BarTitle = styled("h2")`
@@ -12,6 +12,8 @@ const BarTitle = styled("h2")`
   padding-bottom: 15px;
   font-size: 30px;
   color: ${theme.colors.primary};
+  text-transform: capitalize;
+  font-weight: 300;
 `;
 
 const DescriptionBar = styled("p")`
@@ -20,6 +22,7 @@ const DescriptionBar = styled("p")`
 `;
 
 const Footer = styled("div")`
+  margin-top: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;

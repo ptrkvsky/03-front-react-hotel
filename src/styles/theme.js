@@ -1,15 +1,15 @@
 const theme = {
   colors: {
-    mainBg: "#202530",
-    main: "#ebe9e1",
-    primary: "#efbb35",
+    mainBg: "#f8f8f8",
+    main: "#a5a4ab",
+    primary: "#9b5656",
     secondary: "#343d4f",
     tertiary: "#0105d2"
   },
   fonts: {
-    logo: "'Slabo 27px', serif",
-    primary: "'Merriweather', serif",
-    cursive: "'Dancing Script', cursive"
+    logo: "Manrope, sans-serif",
+    primary: "'Roboto', serif",
+    serif: "'Slabo 27px', cursive"
   }
 };
 

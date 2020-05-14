@@ -167,21 +167,39 @@ export default function GlobalStyle() {
           }
         }
 
+        .f400{
+          font-weight: 400;
+        }
+        .extra-bold{
+          font-weight: 900;
+        }
+
         /* buttons */
         .btn-primary {
+          background: #9b5656;
           border: none;
-          padding: 10px;
-          font-size: 25px;
-          background-color: ${theme.colors.primary};
-          color: #fff;
-          transition: all 0.3s ease;
-          text-transform: uppercase;
-          margin-bottom: 20px;
-          &:hover {
+          color: #FFF;
+          padding: 10px 25px;
+          font-size: 19px;
+          font-family: Roboto;
+          border-radius: 3px;
+          cursor: pointer;
+          letter-spacing: 1px;
+          font-family: "Slabo 27px";
+                &:hover {
             transform: scale(0.95);
           }
         }
 
+        form{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .relative{
+          position: relative;
+        }
+        
         /* LAYOUT */
         .max-container {
           width: 1280px;

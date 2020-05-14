@@ -7,11 +7,11 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Link to="/">
-        <Logo>🍺 Bar App</Logo>
+        <Logo>Hôtel App</Logo>
       </Link>
       <Nav>
-        <Link to="/">Home</Link>
-        <Link to="/me">Me</Link>
+        <Link to="/"></Link>
+        <Link to="/me"></Link>
       </Nav>
     </HeaderContainer>
   );

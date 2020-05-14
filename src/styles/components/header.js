@@ -2,10 +2,12 @@ import styled from "@emotion/styled";
 import theme from "../theme";
 
 const HeaderContainer = styled("header")`
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
+  padding: 20px;
 `;
 
 const Nav = styled("nav")`
@@ -17,8 +19,9 @@ const Nav = styled("nav")`
 const Logo = styled("p")`
   display: block;
   font-size: 30px;
-  color: ${theme.colors.main};
+  color: #FFF;
   font-family: ${theme.fonts.logo};
+  text-shadow: 2px 2px 2px #b0b0b0;
 `;
 
 export { HeaderContainer, Nav, Logo };
