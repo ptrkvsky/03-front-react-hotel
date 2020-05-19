@@ -4,7 +4,7 @@ const usePaginationHotel = (id) => {
   const [hotelsPagined, setHotelsPagined] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:8080/hotels/pages/${id}`)
+    fetch(`http://178.62.113.122:8080/hotels/pages/${id}`)
       .then(body => body.json())
       .then(response => {
         setHotelsPagined(response);

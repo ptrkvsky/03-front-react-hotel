@@ -4,7 +4,7 @@ import utils from  '../utils/const'
 const useTypesHotel = () => {
   const [typesHotel, setTypesHotel] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:8080/type-hotels`)
+    fetch(`http://178.62.113.122:8080/type-hotels`)
       .then(body => body.json())
       .then(response => {
         setTypesHotel(response);

@@ -5,7 +5,7 @@ const useHotels = () => {
   const [hotels, setHotels] = useState({});
   useEffect(() => {
 
-    fetch(`http://localhost:8080/hotels/test`)
+    fetch(`http://178.62.113.122:8080/hotels/test`)
       .then(body => body.json())
       .then(response => {     
           console.log(response)   
